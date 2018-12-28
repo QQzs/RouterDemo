@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zs.demo.loginlib" >
+
+    <application>
+
+        <activity android:name=".LoginActivity"/>
+
+    </application>
+
+</manifest>
