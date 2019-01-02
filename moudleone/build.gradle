@@ -33,7 +33,7 @@ android {
     sourceSets {
         main {
             if (rootProject.ext.moudleapp) {
-                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+                manifest.srcFile 'src/main/moudle/AndroidManifest.xml'
             } else {
                 manifest.srcFile 'src/main/AndroidManifest.xml'
                 java {

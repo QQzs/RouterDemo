@@ -34,8 +34,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
     implementation project(':baselib')
-    implementation project(':loginlib')
-    if (rootProject.ext.moudleapp) {
+    if (!rootProject.ext.moudleapp) {
         implementation project(':moudlemain')
         implementation project(':moudleone')
         implementation project(':moudletwo')
