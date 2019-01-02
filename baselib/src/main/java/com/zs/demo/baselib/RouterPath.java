@@ -13,4 +13,7 @@ public class RouterPath {
     public static final String ROUTER_LOGIN = "/login/loginPage";
     public static final String ROUTER_OTHER = "/other/otherPage";
 
+    public static final String ROUTER_ONE = "/one/onePage";
+    public static final String ROUTER_TWO = "/two/twoPage";
+
 }

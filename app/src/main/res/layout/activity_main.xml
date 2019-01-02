@@ -31,4 +31,28 @@
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/tv_login"/>
 
+    <TextView
+        android:id="@+id/tv_one"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        android:background="@color/colorPrimary"
+        android:text="one"
+        android:gravity="center"
+        android:onClick="clickListener"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/tv_other"/>
+
+    <TextView
+        android:id="@+id/tv_two"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        android:background="@color/colorPrimary"
+        android:text="two"
+        android:gravity="center"
+        android:onClick="clickListener"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/tv_one"/>
+
 </android.support.constraint.ConstraintLayout>

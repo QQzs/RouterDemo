@@ -43,9 +43,15 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.tv_other:
-//                Intent intent = new Intent(MainActivity.this , OtherActivity.class);
-//                startActivity(intent);
                 ARouter.getInstance().build(RouterPath.ROUTER_OTHER).navigation();
+                break;
+            case R.id.tv_one:
+                ARouter.getInstance().build(RouterPath.ROUTER_ONE)
+                        .navigation();
+                break;
+            case R.id.tv_two:
+                ARouter.getInstance().build(RouterPath.ROUTER_TWO)
+                        .navigation();
                 break;
         }
 

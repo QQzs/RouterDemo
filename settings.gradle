@@ -1,1 +1,1 @@
-include ':app', ':baselib', ':loginlib'
+include ':app', ':baselib', ':loginlib', ':moudleone', ':moudletwo', ':moudlemain'

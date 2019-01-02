@@ -1,16 +1,16 @@
-package com.zs.demo.routerdemo;
+package com.zs.demo.moudleone.app;
 
 import com.zs.demo.baselib.BaseApplication;
 
 /**
  * Created by zs
- * Date：2018年 12月 27日
- * Time：16:58
+ * Date：2019年 01月 02日
+ * Time：13:27
  * —————————————————————————————————————
  * About:
  * —————————————————————————————————————
  */
-public class MyApplication extends BaseApplication {
+public class MyAppOne extends BaseApplication {
 
     @Override
     public void onCreate() {

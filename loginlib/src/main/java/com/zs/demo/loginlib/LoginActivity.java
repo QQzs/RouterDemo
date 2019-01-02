@@ -51,13 +51,15 @@ public class LoginActivity extends AppCompatActivity {
         et_login_phone = findViewById(R.id.et_login_phone);
         ARouter.getInstance().inject(this);
         et_login_phone.setText(phone);
-        Log.d("My_Log","age = " + age + " user = " + mUser.getName());
 
         mUsers = (List<User>) getIntent().getSerializableExtra("users");
         mArray = getIntent().getStringArrayListExtra("array");
-        Log.d("My_Log","users size = " + mUsers.size());
-        Log.d("My_Log","array size = " + mArray.size());
-
+        if (mUsers != null){
+            Log.d("My_Log","users size = " + mUsers.size());
+        }
+        if (mArray != null){
+            Log.d("My_Log","array size = " + mArray.size());
+        }
 
 
     }
