@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.zs.demo.baselib.RouterPath;
 import com.zs.demo.baselib.bean.User;
@@ -15,6 +16,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+@Route(path = RouterPath.ROUTER_MAIN)
 public class MainActivity extends AppCompatActivity {
 
     @Override

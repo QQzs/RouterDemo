@@ -10,6 +10,8 @@ package com.zs.demo.baselib;
  */
 public class RouterPath {
 
+    public static final String ROUTER_MAIN = "/main/mainPage";
+
     public static final String ROUTER_LOGIN = "/login/loginPage";
     public static final String ROUTER_OTHER = "/other/otherPage";
 

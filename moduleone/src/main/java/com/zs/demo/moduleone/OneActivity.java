@@ -29,9 +29,14 @@ public class OneActivity extends AppCompatActivity {
 
     public void clickListener(View view){
 
-        ARouter.getInstance().build(RouterPath.ROUTER_LOGIN)
-                .withString("phone" , "123456789")
-                .navigation();
+        int id = view.getId();
+        if (id == R.id.tv_login){
+            ARouter.getInstance().build(RouterPath.ROUTER_LOGIN)
+                    .withString("phone" , "123456789")
+                    .navigation();
+        } else if (id == R.id.tv_two){
+            ARouter.getInstance().build(RouterPath.ROUTER_TWO).navigation();
+        }
 
     }
 }
