@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zs.demo.moduletwo">
+
+    <application>
+
+        <activity android:name="com.zs.demo.moduletwo.TwoActivity"/>
+
+    </application>
+
+</manifest>
