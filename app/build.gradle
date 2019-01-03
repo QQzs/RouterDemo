@@ -35,7 +35,6 @@ dependencies {
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
     implementation project(':baselib')
     if (!rootProject.ext.isModule) {
-        implementation project(':modulemain')
         implementation project(':moduleone')
         implementation project(':moduletwo')
     }
