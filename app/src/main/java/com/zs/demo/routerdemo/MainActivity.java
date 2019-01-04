@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
             ARouter.getInstance().build(RouterPath.ROUTER_ONE)
                     .navigation();
 
+
+
         } else if (i == R.id.tv_two) {
             ARouter.getInstance().build(RouterPath.ROUTER_TWO)
                     .navigation();

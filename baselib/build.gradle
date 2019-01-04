@@ -1,15 +1,14 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
-
-
+    compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -32,16 +31,15 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
     //noinspection GradleCompatible
-    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation "com.android.support:appcompat-v7:$supportVersion"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     //组件化ARouter
-    api 'com.alibaba:arouter-api:1.4.1'
-    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+    api "com.alibaba:arouter-api:$arouterVersion"
+    annotationProcessor "com.alibaba:arouter-compiler:$arouterCompilerVersion"
     // 权限管理
     api 'io.reactivex.rxjava2:rxjava:2.1.3'
     api 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
