@@ -19,6 +19,8 @@ import com.zs.demo.baselib.base.BaseFragment;
 @Route(path = RouterPath.ROUTER_ONE_FRAGMENT)
 public class OneFragment extends BaseFragment {
 
+
+
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_one;
@@ -27,6 +29,15 @@ public class OneFragment extends BaseFragment {
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
 
+        view.findViewById(R.id.tv_login).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ARouter.getInstance().build(RouterPath.ROUTER_LOGIN)
+                        .withString("phone" , "123456789")
+                        .navigation();
+            }
+        });
+
     }
 
     @Override
@@ -34,14 +45,4 @@ public class OneFragment extends BaseFragment {
 
     }
 
-    public void clickListener(View view){
-
-        int id = view.getId();
-        if (id == R.id.tv_login){
-            ARouter.getInstance().build(RouterPath.ROUTER_LOGIN)
-                    .withString("phone" , "123456789")
-                    .navigation();
-        }
-
-    }
 }

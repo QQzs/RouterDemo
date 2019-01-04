@@ -2,8 +2,9 @@ package com.zs.demo.moduleone;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
@@ -25,18 +26,10 @@ public class OneActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one);
 
-    }
-
-    public void clickListener(View view){
-
-        int id = view.getId();
-        if (id == R.id.tv_login){
-            ARouter.getInstance().build(RouterPath.ROUTER_LOGIN)
-                    .withString("phone" , "123456789")
-                    .navigation();
-        } else if (id == R.id.tv_two){
-            ARouter.getInstance().build(RouterPath.ROUTER_TWO).navigation();
-        }
+        Fragment fragment = (Fragment) ARouter.getInstance().build(RouterPath.ROUTER_ONE_FRAGMENT).navigation();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.add(R.id.fl_container, fragment).commitAllowingStateLoss();
 
     }
+
 }
