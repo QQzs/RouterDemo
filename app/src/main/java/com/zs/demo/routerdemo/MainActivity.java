@@ -10,11 +10,6 @@ import android.widget.Toast;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.zs.demo.baselib.RouterPath;
-import com.zs.demo.baselib.bean.User;
-
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 @Route(path = RouterPath.ROUTER_MAIN)
 public class MainActivity extends AppCompatActivity {
@@ -28,31 +23,9 @@ public class MainActivity extends AppCompatActivity {
     public void clickListener(View view){
 
         int i = view.getId();
-        if (i == R.id.tv_login) {
-            ArrayList<String> array = new ArrayList<>();
-            array.add("123");
-            List<User> users = new ArrayList<>();
-            users.add(new User("aaa"));
-            users.add(new User("bbb"));
-
-            ARouter.getInstance().build(RouterPath.ROUTER_LOGIN)
-                    .withString("phone", "1234567")
-                    .withInt("age", 12)
-                    .withSerializable("user", new User("zzz"))
-                    .withSerializable("users", (Serializable) users)
-                    .withStringArrayList("array", array)
-                    .navigation(this, 1000);
-
-
-        } else if (i == R.id.tv_other) {
-            ARouter.getInstance().build(RouterPath.ROUTER_OTHER).navigation();
-//            startActivity(new Intent(this , OtherActivity.class));
-
-        } else if (i == R.id.tv_one) {
+        if (i == R.id.tv_one) {
             ARouter.getInstance().build(RouterPath.ROUTER_ONE)
                     .navigation();
-
-
 
         } else if (i == R.id.tv_two) {
             ARouter.getInstance().build(RouterPath.ROUTER_TWO)

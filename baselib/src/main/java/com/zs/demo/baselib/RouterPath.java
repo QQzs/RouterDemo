@@ -18,7 +18,7 @@ public class RouterPath {
     public static final String ROUTER_ONE = "/one/onePage";
     public static final String ROUTER_TWO = "/two/twoPage";
 
-    public static final String ROUTER_ONE_FRAGMENT = "/fragment/one/onePage";
-    public static final String ROUTER_TWO_FRAGMENT = "/fragment/two/twoPage";
+    public static final String ROUTER_ONE_FRAGMENT = "/fragment/oneFragment";
+    public static final String ROUTER_TWO_FRAGMENT = "/fragment/twoFragment";
 
 }

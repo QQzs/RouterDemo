@@ -17,12 +17,12 @@
         />
 
     <TextView
-        android:id="@+id/tv_two"
+        android:id="@+id/tv_other"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_margin="20dp"
         android:background="@color/colorPrimary"
-        android:text="one - Two"
+        android:text="one - Other"
         android:gravity="center"
         android:onClick="clickListener"
         android:textColor="@color/white"

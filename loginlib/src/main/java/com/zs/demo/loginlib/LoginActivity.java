@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -15,9 +14,6 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 import com.zs.demo.baselib.RouterPath;
-import com.zs.demo.baselib.bean.User;
-
-import java.util.List;
 
 import io.reactivex.functions.Consumer;
 
@@ -34,13 +30,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Autowired(name = "phone")
     public String phone;
-    @Autowired(name = "age")
-    public int age;
-    @Autowired(name = "user")
-    public User mUser;
 
-    public List<User> mUsers;
-    public List<String> mArray;
 
     public EditText et_login_phone;
 
@@ -48,19 +38,9 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        et_login_phone = findViewById(R.id.et_login_phone);
         ARouter.getInstance().inject(this);
+        et_login_phone = findViewById(R.id.et_login_phone);
         et_login_phone.setText(phone);
-
-        mUsers = (List<User>) getIntent().getSerializableExtra("users");
-        mArray = getIntent().getStringArrayListExtra("array");
-        if (mUsers != null){
-            Log.d("My_Log","users size = " + mUsers.size());
-        }
-        if (mArray != null){
-            Log.d("My_Log","array size = " + mArray.size());
-        }
-
 
     }
 

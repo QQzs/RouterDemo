@@ -3,9 +3,6 @@ package com.zs.demo.moduleone;
 import android.os.Bundle;
 import android.view.View;
 
-import com.alibaba.android.arouter.facade.annotation.Route;
-import com.alibaba.android.arouter.launcher.ARouter;
-import com.zs.demo.baselib.RouterPath;
 import com.zs.demo.baselib.base.BaseFragment;
 
 /**
@@ -16,10 +13,8 @@ import com.zs.demo.baselib.base.BaseFragment;
  * About:
  * —————————————————————————————————————
  */
-@Route(path = RouterPath.ROUTER_ONE_FRAGMENT)
+//@Route(path = RouterPath.ROUTER_ONE_FRAGMENT)
 public class OneFragment extends BaseFragment {
-
-
 
     @Override
     protected int getLayoutId() {
@@ -29,14 +24,32 @@ public class OneFragment extends BaseFragment {
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
 
-        view.findViewById(R.id.tv_login).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ARouter.getInstance().build(RouterPath.ROUTER_LOGIN)
-                        .withString("phone" , "123456789")
-                        .navigation();
-            }
-        });
+//        view.findViewById(R.id.tv_login).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                ARouter.getInstance().build(RouterPath.ROUTER_LOGIN)
+//                        .withString("phone" , "123456789")
+//                        .navigation();
+//            }
+//        });
+//
+//        view.findViewById(R.id.tv_other).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                ArrayList<String> array = new ArrayList<>();
+//                array.add("123");
+//                List<User> users = new ArrayList<>();
+//                users.add(new User("aaa"));
+//                users.add(new User("bbb"));
+//
+//                ARouter.getInstance().build(RouterPath.ROUTER_OTHER)
+//                        .withInt("age", 12)
+//                        .withSerializable("user", new User("zzz"))
+//                        .withSerializable("users", (Serializable) users)
+//                        .withStringArrayList("array", array)
+//                        .navigation();
+//            }
+//        });
 
     }
 
