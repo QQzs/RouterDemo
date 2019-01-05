@@ -3,6 +3,7 @@ package com.zs.demo.moduletwo;
 import android.os.Bundle;
 import android.view.View;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.zs.demo.baselib.RouterPath;
 import com.zs.demo.baselib.base.BaseFragment;
@@ -15,7 +16,7 @@ import com.zs.demo.baselib.base.BaseFragment;
  * About:
  * —————————————————————————————————————
  */
-//@Route(path = RouterPath.ROUTER_TWO_FRAGMENT)
+@Route(path = RouterPath.ROUTER_TWO_FRAGMENT)
 public class TwoFragment extends BaseFragment {
 
     @Override
